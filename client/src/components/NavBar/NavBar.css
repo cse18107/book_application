@@ -2,10 +2,11 @@
     width: 100%;
     height: 5.6vw;
     background-color: #191919;
-    display: flex;
+    /* display: flex; */
     justify-content:center;
     align-items: center;
     position: relative;
+    z-index: 3;
 }
 
 
@@ -13,8 +14,8 @@
 .navbar-body:before, .navbar-body:after {
     content: '';
     position: absolute;
-    left: -2px;
-    top: -2px;
+    right: 0px;
+    bottom: -2px;
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
       #0000ff, #00ff00,#ffff00, #ff0000);
     background-size: 400%;
@@ -22,6 +23,7 @@
     height: calc(100% + 4px);
     border-radius: 10px;
     z-index: -1;
+    
     animation: steam 20s linear infinite;
   }
   
@@ -47,16 +49,17 @@
 
 
 .navbar-container{
-    width: 90%;
-    height: 90%;
-    margin: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
+    /* margin: 40px; */
     display: flex;
     align-items:center;
     justify-content:center;
 }
 .navbar-content{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     display: flex;
     justify-content: space-between;
 }

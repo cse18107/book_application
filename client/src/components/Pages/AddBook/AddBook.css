@@ -1,0 +1,149 @@
+.addbook-body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.addbook-container {
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addbook-content {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 4px solid rgb(94, 154, 128);
+    border-bottom: 4px solid rgb(94, 154, 128);
+    border-right: 4px solid rgb(94, 154, 128);
+}
+
+.addbook-content:hover{
+
+}
+img {
+    width: 5vw;
+}
+
+.addbook-content__inputs {
+    display: flex;
+    width: 60%;
+    height: 80%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2vw;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(64, 67, 70);
+    margin: 5px;
+}
+
+input {
+    height: 2.7vw;
+    border-radius: 5px;
+    background-color: rgb(42, 43, 47);
+    outline: none;
+
+    border: 3px solid rgb(81, 89, 95);
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+input:focus {
+    border: 3px solid rgb(94, 154, 128);
+}
+
+select {
+    background-color: rgb(42, 43, 47);
+    outline: none;
+    color: rgb(64, 67, 70);
+    border: 3px solid rgb(81, 89, 95);
+    font-size: 1vw;
+    /* padding-left: 1vw; */
+    font-family: 'Roboto Mono', monospace;
+}
+select:focus {
+    border: 3px solid rgb(94, 154, 128);
+}
+
+textarea {
+    height: 4vw;
+    border-radius: 5px;
+    background-color: rgb(42, 43, 47);
+    outline: none;
+    border: 3px solid rgb(81, 89, 95);
+    font-size: 1.2vw;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+textarea:focus {
+    border: 3px solid rgb(94, 154, 128);
+}
+
+.category {
+    display: flex;
+}
+
+.price {
+    display: flex;
+}
+
+.price input {
+    width: 9vw;
+}
+
+.category-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} */
+
+button {
+    height: 3.4vw;
+    width: 8vw;
+    margin-right: 4vw;
+    border-radius: 5px;
+    background-color: rgb(42, 43, 47);
+    outline: none;
+    color: rgb(81, 89, 95);
+    border: 3px solid rgb(81, 89, 95);
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    font-family: 'Roboto Mono', monospace;
+
+    padding: 10px;
+}
+
+.submit:hover{
+    background-color: aquamarine;
+    color: white;
+    border: 2px solid aquamarine;
+}
+.cancel:hover{
+    background-color: tomato;
+    color: white;
+    border: 2px solid tomato;
+}
