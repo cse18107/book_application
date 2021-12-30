@@ -21,9 +21,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-left: 4px solid rgb(94, 154, 128);
-    border-bottom: 4px solid rgb(94, 154, 128);
-    border-right: 4px solid rgb(94, 154, 128);
+    /* border-left: 4px solid rgb(94, 154, 128); */
+    /* border-bottom: 7px solid rgb(94, 154, 128); */
+    /* border-right: 7px solid rgb(94, 154, 128); */
 }
 
 .addbook-content:hover{
