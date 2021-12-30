@@ -23,5 +23,5 @@ justify-content: center;
     
     grid-template-columns: repeat(5,16%);
     column-gap: 5% ;
-    row-gap: 5% 5%;
+    row-gap: 5% ;
 }

@@ -5,7 +5,47 @@
     display: flex;
     justify-content:center;
     align-items: center;
+    position: relative;
 }
+
+
+
+.navbar-body:before, .navbar-body:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 10px;
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .navbar-body:after {
+    filter: blur(50px);
+  }
+
+
+
+
+
+
 .navbar-container{
     width: 90%;
     height: 90%;

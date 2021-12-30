@@ -9,9 +9,9 @@ function BookCard(props) {
                 </div>
                 <div className="bookcard-lower">
                     <div className="bookcard-lower__content">
-                        <h4>Name: Chemistry</h4>
-                        <p>Author: Derek B.Lowe</p>
-                        <p>Price: $4.5</p>
+                        <h4>Name: {props.item.name}</h4>
+                        <p>Author: {props.item.author}</p>
+                        <p>Price: {props.item.price}</p>
                     </div>
                 </div>
             </div>
