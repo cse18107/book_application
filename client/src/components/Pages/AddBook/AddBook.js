@@ -1,6 +1,7 @@
 import React from "react";
 import "./AddBook.css";
 import logo from "../../../image/books-stack-of-three (1).png";
+import { Link } from 'react-router-dom';
 
 function AddBook() {
   return (
@@ -13,6 +14,10 @@ function AddBook() {
               <label>Title</label>
               <input></input>
             </div>
+            <div className="link column">
+                  <label>Link of image</label>
+                  <input></input>
+                </div>
             <div className="author column">
               <label>Author</label>
               <input></input>
@@ -39,7 +44,7 @@ function AddBook() {
 
             <div className="buttons">
               <button className="submit">Submit</button>
-              <button className="cancel">Cancel</button>
+              <Link to="/"><button className="cancel">Cancel</button></Link>
             </div>
           </div>
         </div>

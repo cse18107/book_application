@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./EditBook.css";
+import { Link } from "react-router-dom";
 
 const DUMMY_LIST = [
   {
@@ -164,11 +166,15 @@ function EditBook() {
             </div>
           </div>
           <div className="editbook-right__content">
-            <div className="editbook-right__content">
+            
               <div className="editbook-content__inputs">
                 <div className="title column">
                   <label>Title</label>
                   <input value={item[0].name}></input>
+                </div>
+                <div className="link column">
+                  <label>Link of image</label>
+                  <input></input>
                 </div>
                 <div className="author column">
                   <label>Author</label>
@@ -196,9 +202,10 @@ function EditBook() {
 
                 <div className="buttons">
                   <button className="submit">Submit</button>
+                  <Link to="/"><button className="cancel">Cancel</button></Link>
                 </div>
               </div>
-            </div>
+           
           </div>
         </div>
       </div>
