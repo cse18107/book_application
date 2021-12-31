@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const DUMMY_DATA = require("./dummy");
 const Book = require("./model");
+const cors = require("cors");
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 const DB =
   "mongodb+srv://cse18107:cse18107@cluster0.7byir.mongodb.net/books_application?retryWrites=true&w=majority";
