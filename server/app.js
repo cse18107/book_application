@@ -1,57 +1,89 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const DUMMY_DATA = require('./dummy');
+const express = require("express");
+const mongoose = require("mongoose");
+const DUMMY_DATA = require("./dummy");
+const Book = require("./model");
 
 const app = express();
 
 app.use(express.json());
 
-const DB="mongodb+srv://cse18107:cse18107@cluster0.7byir.mongodb.net/books_application?retryWrites=true&w=majority";
+const DB =
+  "mongodb+srv://cse18107:cse18107@cluster0.7byir.mongodb.net/books_application?retryWrites=true&w=majority";
 
-mongoose.connect(DB,{
-    useNewUrlParser:true,
-}).then(con=>{
-    console.log('DB connection is successful!');
-}).catch((error)=>{
-   console.log(error);
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+  })
+  .then((con) => {
+    console.log("DB connection is successful!");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+app.get("/GET/books", async (req, res) => {
+  try {
+    const books = await Book.find();
+    res.status(200).json({
+      message: "getting all books",
+      data: {
+        books,
+      },
+    });
+  } catch (error) {}
 });
 
-app.get('/GET/books',(req,res)=>{
-    res.status(200).json({
-        'message':"getting all books",
-        'data':{
-            DUMMY_DATA
-        }
-    })
-})
+app.get("/GET/book/:id", async (req, res) => {
+    try {
+      const book = await Book.findById(req.params.id);
+      res.status(200).json({
+        message: "getting  book",
+        data: {
+          book,
+        },
+      });
+    } catch (error) {}
+  });
 
-app.post('/PUT/book',(req,res)=>{
-    const book = req.body;
+app.post("/POST/book", async (req, res) => {
+  try {
+    const newBook = await Book.create(req.body);
     res.status(200).json({
-        'message':"Sending the data of a book",
-        'data':{
-            book
-        }
-    })
+      message: "Sending the data of a book",
+      data: {
+        newBook,
+      },
+    });
+  } catch (error) {}
 });
 
-
-
-app.patch('/PATCH/book/:id',(req,res)=>{
-
-    res.status(200).json({
-        "message":'books',
-        'data':{
-            book
-        }
-    })
+app.patch("/PATCH/book/:id", async(req, res) => {
+    try {
+        const updatedBook = await Book.findByIdAndUpdate(req.params.id,req.body,{
+            new:true,
+            runValidators:true
+        });
+        res.status(200).json({
+          message: "Updating the data of a book",
+          data: {
+            updatedBook,
+          },
+        });
+      } catch (error) {}
 });
 
-app.delete('/DELETE/book/:id',(req,res)=>{
+app.delete("/DELETE/book/:id", async(req, res) => {
+    try {
+        const deletedBook = await Book.findByIdAndDelete(req.params.id);
+        res.status(200).json({
+          message: "Deleting a book",
+          data: {
+            deletedBook,
+          },
+        });
+      } catch (error) {}
+});
 
-})
-
-
-app.listen(4000,()=>{
-    console.log('Listening from port 4000');
-})
+app.listen(4000, () => {
+  console.log("Listening from port 4000");
+});
