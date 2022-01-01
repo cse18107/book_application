@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./AddBook.css";
 import logo from "../../../image/books-stack-of-three (1).png";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 function AddBook() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [link, setLink] = useState("");
@@ -18,10 +19,11 @@ function AddBook() {
   // };
 
   //useEffect(()=>{
-  const postBookData = async () => {
+  const postBookData = async (e) => {
     //console.log(book);
+    e.preventDefault();
     
-    try {
+   // try {
       console.log({ title, author, link, description, category, price });
       const res = await fetch("http://localhost:4000/POST/book", {
         method: "POST",
@@ -35,12 +37,12 @@ function AddBook() {
       const data = await res.json();
       
       console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    navigate('/');
   };
-
-  //},[book])
+ 
 
   return (
     <div className="addbook-body">
@@ -81,6 +83,7 @@ function AddBook() {
                     setCategory(e.target.value);
                   }}
                 >
+                  <option ></option>
                   <option value="chemistry">Chemistry</option>
                   <option value="math">Math</option>
                   <option value="physics">Physics</option>

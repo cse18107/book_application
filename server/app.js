@@ -15,6 +15,7 @@ const DB =
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
+    useUnifiedTopology:true
   })
   .then((con) => {
     console.log("DB connection is successful!");
@@ -49,6 +50,7 @@ app.get("/GET/book/:id", async (req, res) => {
 
 app.post("/POST/book", async (req, res) => {
   try {
+    console.log(req.body);
     const newBook = await Book.create(req.body);
     res.status(200).json({
       message: "Sending the data of a book",
