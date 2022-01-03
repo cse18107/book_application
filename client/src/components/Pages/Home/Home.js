@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BookCard from "../../BookCard/BookCard";
 import "./Home.css";
-// import { Link } from "react-router-dom";
-// import { count } from "../../../../../server/model";
+
 
 function Home() {
   const [books, setBooks] = useState([]);

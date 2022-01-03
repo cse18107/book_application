@@ -11,19 +11,11 @@ function AddBook() {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
-  // const [book, setBook] = useState({});
 
-  // const setBookDetails = () => {
-  //   setBook({ title, author, link, description, category, price });
-  //   postBookData();
-  // };
-
-  //useEffect(()=>{
   const postBookData = async (e) => {
-    //console.log(book);
+
     e.preventDefault();
-    
-   // try {
+
       console.log({ title, author, link, description, category, price });
       const res = await fetch("http://localhost:4000/POST/book", {
         method: "POST",
@@ -37,16 +29,11 @@ function AddBook() {
       const data = await res.json();
       
       console.log(data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+
     navigate('/');
   };
 
 
-
-
- 
 
   return (
     <div className="addbook-body">

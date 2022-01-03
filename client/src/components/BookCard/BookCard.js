@@ -15,7 +15,7 @@ function BookCard(props) {
       }
     });
     props.callGetBooks();
-    //console.log("DELETE = "+res.json());
+
   }
   return (
     <div className="bookcard-body">

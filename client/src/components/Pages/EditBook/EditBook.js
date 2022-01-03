@@ -45,7 +45,7 @@ function EditBook() {
                 </div>
                 <div className="link column">
                   <label>Link of image</label>
-                  <input></input>
+                  <input value={book.link}></input>
                 </div>
                 <div className="author column">
                   <label>Author</label>
@@ -63,7 +63,7 @@ function EditBook() {
                   </div>
                   <div className="price">
                     <label>Price</label>
-                    <input type="number" value={book.price}></input>
+                    <input value={book.price}></input>
                   </div>
                 </div>
                 <div className="description column">
