@@ -24,6 +24,35 @@
     display: grid;
 
     grid-template-columns: repeat(5, 16%);
+    /* grid-template-rows:  29%; */
     column-gap: 5%;
-    row-gap: 5%;
+    row-gap: 10%;
+}
+@media only screen and (max-width:1518px) {
+    .home-content{
+        grid-template-columns: repeat(4, 20%);
+        /* row-gap: 10%; */
+        column-gap: 6.65%;
+    }
+}
+@media only screen and (max-width:1218px) {
+    .home-content{
+        grid-template-columns: repeat(3, 25%);
+        /* row-gap: 10%; */
+        column-gap: 12.5%;
+    }
+}
+@media only screen and (max-width:1016px) {
+    .home-content{
+        grid-template-columns: repeat(3, 29%);
+       
+        column-gap:6.45%;
+    }
+}
+@media only screen and (max-width:424px) {
+    .home-content{
+        grid-template-columns: repeat(1, 55%);
+        /* row-gap: 10%; */
+        column-gap: 25.95%;
+    }
 }
