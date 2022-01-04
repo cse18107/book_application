@@ -8,7 +8,7 @@
 
 .addbook-container {
     width: 100%;
-    height: 40vw;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,16 +21,60 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* border-left: 4px solid rgb(94, 154, 128); */
-    /* border-bottom: 7px solid rgb(94, 154, 128); */
-    /* border-right: 7px solid rgb(94, 154, 128); */
+    /* border-left: 4px solid rgb(94, 154, 128);
+    border-bottom: 7px solid rgb(94, 154, 128);
+    border-right: 7px solid rgb(94, 154, 128); */
 }
-
+@media only screen and (max-width:1736px){
+    .addbook-content {
+        width: 56%;
+    }
+}
+@media only screen and (max-width:1514px){
+    .addbook-content {
+        width: 60%;
+    }
+}
+@media only screen and (max-width:1420px){
+    .addbook-content {
+        width: 64%;
+    }
+}
+@media only screen and (max-width:1350px){
+    .addbook-content {
+        width: 69%;
+    }
+}
+@media only screen and (max-width:1244px){
+    .addbook-content {
+        width: 73%;
+    }
+}
+@media only screen and (max-width:1170px){
+    .addbook-content {
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1072px){
+    .addbook-content {
+        width: 85%;
+    }
+}
+@media only screen and (max-width:994px){
+    .addbook-content {
+        width: 90%;
+    }
+}
+@media only screen and (max-width:612px){
+    .addbook-content {
+        width: 100%;
+    }
+}
 .addbook-content:hover{
 
 }
 img {
-    width: 5vw;
+    width: 6rem;
 }
 
 .addbook-content__inputs {
@@ -41,19 +85,25 @@ img {
     flex-direction: column;
 }
 
+@media only screen and (max-width:994px){
+    .addbook-content__inputs {
+        width: 80%;
+    }
+}
+
 label {
-    font-size: 1.2vw;
+    font-size: 1.5rem;
     font-family: 'Roboto Mono', monospace;
     color: rgb(64, 67, 70);
     margin: 5px;
 }
 
 input {
-    height: 2.7vw;
+    height: 3.8rem;
     border-radius: 5px;
     background-color: rgb(42, 43, 47);
     outline: none;
-
+    margin-top: 10px;
     border: 3px solid rgb(81, 89, 95);
     font-size: 1.2vw;
     padding-left: 1vw;
@@ -70,7 +120,8 @@ select {
     outline: none;
     color: rgb(64, 67, 70);
     border: 3px solid rgb(81, 89, 95);
-    font-size: 1vw;
+    font-size: 1.4rem;
+    margin-top: 10px;
     /* padding-left: 1vw; */
     font-family: 'Roboto Mono', monospace;
 }
@@ -79,8 +130,7 @@ select:focus {
 }
 
 textarea {
-    height: 4vw;
-    border-radius: 5px;
+    height: 5rem;
     background-color: rgb(42, 43, 47);
     outline: none;
     border: 3px solid rgb(81, 89, 95);
@@ -100,9 +150,20 @@ textarea:focus {
 .price {
     display: flex;
 }
+@media only screen and (max-width:938px){
+    .category {
+        flex-direction: column;
+    }
+    select{
+        padding: 10px;
+    }
+    .price {
+        flex-direction: column;
+    }
+}
 
 .price input {
-    width: 9vw;
+    width: 150px;
 }
 
 .category-price {
@@ -122,19 +183,26 @@ textarea:focus {
 } */
 
 button {
-    height: 3.4vw;
-    width: 8vw;
-    margin-right: 4vw;
+    height: 70px;
+    width: 180px;
+    margin-top: 20px;
+    margin-right: 2rem;
     border-radius: 5px;
     background-color: rgb(42, 43, 47);
     outline: none;
     color: rgb(81, 89, 95);
     border: 3px solid rgb(81, 89, 95);
-    font-size: 1.2vw;
-    padding-left: 1vw;
+    font-size: 1.5rem;
+    /* padding-left: 1vw; */
     font-family: 'Roboto Mono', monospace;
 
     padding: 10px;
+}
+
+@media only screen and (max-width:790px){
+    button {
+        width: 40%;
+    }
 }
 
 .submit:hover{
