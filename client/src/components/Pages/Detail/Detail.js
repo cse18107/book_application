@@ -34,6 +34,7 @@ function Detail() {
           <div className="detail-left__content">
             <div className="image-content">
               <img
+              className="book-img"
                 src={book.link}
                 alt="book"
               />

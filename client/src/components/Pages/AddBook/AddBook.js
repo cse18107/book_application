@@ -39,7 +39,7 @@ function AddBook() {
     <div className="addbook-body">
       <div className="addbook-container">
         <div className="addbook-content">
-          <img src={logo} alt="book" />
+          <img className="book-logo" src={logo} alt="book" />
           <div className="addbook-content__inputs">
             <div className="title column">
               <label>Title</label>
